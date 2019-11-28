@@ -1,0 +1,16 @@
+<%- include('header.ejs') %>
+<h2>Admin Vagas
+<a href="/admin/vagas/nova">Nova Vaga</a>
+</h2>
+<div>   
+    <ul>
+        <% jobs.forEach(job => {%>
+        <li>
+            <%- job.title %> |
+            <a href="/admin/vagas/delete/<%-job.id%>">Delete</a>
+            <a href="/admin/vagas/edit/<%-job.id%>">Edit</a>
+        </li>
+        <% })%>
+    </ul>     
+</div>
+<%- include('footer.ejs') %>

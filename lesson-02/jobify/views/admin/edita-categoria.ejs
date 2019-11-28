@@ -1,0 +1,13 @@
+<%- include('header.ejs') %>
+<h2>Edit vaga:
+<a href="/admin/categorias">Vagas</a>
+</h2>
+<div>   
+    <form method="post">
+        <label>Categoria</label>
+        <input type="text" name="category" value="<%= category.category %>">
+        <br>
+        <button>Salvar</button>
+    </form>
+</div>
+<%- include('footer.ejs') %>
