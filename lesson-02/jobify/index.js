@@ -5,6 +5,8 @@ const bodyParser = require('body-parser')
 const app = express()
 const dbConnection = sqlite.open('database.sqlite', {Promise})
 
+const port = process.env.PORT || 3000
+
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended:true}))
@@ -129,7 +131,7 @@ const init = async () => {
 
 init()
 
-app.listen(3000, (err) => {
+app.listen(port, (err) => {
     if(err){
         console.log('Error')
     }else{
