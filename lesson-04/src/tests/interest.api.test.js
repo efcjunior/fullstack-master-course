@@ -1,8 +1,8 @@
 const api = require('../interest.api')
 
 test('simpleInterest', () => {
-    const result = api.simpleInterest(100,0.10,1)    
-    expect(result).toBe(10)
+    const result = api.simpleInterest(100,0.20,1)    
+    expect(result).toBe(20)
 })
 
 test('simpleInterestAmount', () => {
