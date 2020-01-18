@@ -1,0 +1,21 @@
+<%- include('../partials/header.ejs')%>
+<h1>Editar Pessoa</h1>
+<p><a href="/pessoas">Voltar para Listar Pessoas</a></p>
+
+<form method="POST">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" value="<%= pessoa.nome %>" name="nome" class="form-control" id="nome" placeholder="Nome">
+    </div>    
+    <div class="form-group">
+        <label for="nascimento">Nascimento</label>
+        <input type="text" value="<%= pessoa.nascimento %>" name="nascimento" class="form-control" id="nascimento" placeholder="Nascimento">
+    </div>    
+    <div class="form-group">
+        <label for="cargo">Cargo</label>
+        <input type="text" value="<%= pessoa.cargo %>" name="cargo" class="form-control" id="cargo" placeholder="Cargo">
+      </div>    
+    <button type="submit" class="btn btn-default">Salvar</button>
+  </form>
+
+<%- include('../partials/footer.ejs')%>
